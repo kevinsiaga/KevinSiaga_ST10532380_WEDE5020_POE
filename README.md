@@ -23,3 +23,11 @@ WED POE
 └── cart.html (Checkout Flow)
     ├── Shopping Bag Review
     └── Payment Gateway
+
+## Changelog
+
+**2026-09-18 - Part 1 Feedback Corrections**
+* Added the missing site map to clearly show the page structure (Home, Shop, About, Contact).
+* Swapped out presentational tags (`<b>`, `<i>`) for correct semantic tags (`<strong>`, `<em>`) across all HTML files to improve accessibility.
+* Cleaned up the `contact.html` form by removing redundant `<br>` tags so the layout can be properly controlled by CSS.
+* Added clear, descriptive comments throughout all HTML files to explain the purpose of each section.

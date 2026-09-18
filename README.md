@@ -32,7 +32,7 @@ WED POE
 * Cleaned up the `contact.html` form by removing redundant `<br>` tags so the layout can be properly controlled by CSS.
 * Added clear, descriptive comments throughout all HTML files to explain the purpose of each section.
 
-## Part 2: CSS & Responsive Design**
+## Part 2: CSS & Responsive Design
 
 * Set up the main `style.css` file to handle all the base fonts, colors, and global brand styling.
 * Used CSS Grid to build out the product layout on the shop page and Flexbox to keep the navigation menu neat and aligned.

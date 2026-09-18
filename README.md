@@ -42,3 +42,5 @@ WED POE
 * Updated the main navigation menu across all HTML files to include a "Cart (0)" link so users can actually access their bag.
 * Created a brand new `cart.html` page to close the shopping loop, giving users a place to review their items and check out.
 * Reused the existing form CSS to style the checkout form on the cart page, keeping the design consistent without needing extra code.
+
+The complete Website will be done in part 3

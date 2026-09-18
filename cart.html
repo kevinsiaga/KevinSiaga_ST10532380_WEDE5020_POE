@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4our.00 | Shopping Cart</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>4our.00</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><strong>Cart (0)</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Your Bag</h2>
+            <p>Review your items before checkout.</p>
+        </section>
+
+        <!-- Cart Items (CSS Grid handles this nicely) -->
+        <section style="margin-bottom: 3rem; border-top: 1px solid #e0e0e0; padding-top: 2rem;">
+            <p><em>Your cart is currently empty.</em></p>
+            <p><a href="shop.html" style="text-decoration: underline;">Continue Shopping</a></p>
+        </section>
+
+        <section>
+            <h3>Checkout Details</h3>
+            <!-- Reusing the contact-form class for quick styling -->
+            <form action="#" method="post" class="contact-form">
+                <div>
+                    <label for="shipping-address">Shipping Address:</label>
+                    <input type="text" id="shipping-address" name="shipping-address" required>
+                </div>
+
+                <div>
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method">
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="eft">EFT</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit">Place Order</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 4our.00 Storefront. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* =========================================
+   1. CSS Reset & Global Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Clean, modern streetwear aesthetic */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1a1a1a; /* Soft black for readability */
+    background-color: #f8f8f8; /* Off-white background */
+}
+
+/* =========================================
+   2. Typography Scales
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Tight tracking for a modern look */
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+h1 { font-size: 2.5rem; text-transform: uppercase; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Pseudo-class for interactive links */
+a:hover, a:focus {
+    color: #555555;
+    border-bottom: 1px solid #555555;
+}
+
+/* =========================================
+   3. Base Layout Structure
+   ========================================= */
+header {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content */
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin-top: 4rem;
+}
+
+/* =========================================
+   4. Shop Page Layout (CSS Grid)
+   ========================================= */
+/* Grid container for the products */
+main section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual product cards */
+article {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects for visual styling */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Shop filters layout (Flexbox) */
+form {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+}
+
+/* =========================================
+   5. Buttons & Form Elements
+   ========================================= */
+button, input[type="submit"] {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #444444;
+}
+
+button:active, input[type="submit"]:active {
+    background-color: #000000;
+}
+
+/* Contact form specific layout */
+.contact-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    font-family: inherit;
+    margin-top: 0.5rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   6. Responsive Design (Media Queries)
+   ========================================= */
+
+/* Make all images responsive by default using relative units */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tablet Breakpoint (768px and below) */
+@media screen and (max-width: 768px) {
+    /* Switch product grid from 3 columns to 2 columns */
+    main section:nth-of-type(3) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Adjust header layout */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile Breakpoint (480px and below) */
+@media screen and (max-width: 480px) {
+    /* Switch product grid to a single column for mobile */
+    main section:nth-of-type(3) {
+        grid-template-columns: 100%; 
+    }
+
+    /* Stack shop filters vertically */
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    /* Adjust typography sizing for smaller screens using relative units */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+/* =========================================
+   7. Product Image Styling
+   ========================================= */
+/* Ensure picture tag acts as a block container */
+article picture {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+/* Force uniform sizes for all product images */
+article img {
+    width: 100%;
+    aspect-ratio: 4 / 5; /* Creates a portrait crop typical for streetwear */
+    object-fit: cover; /* Perfectly fills the space without distorting the image */
+    background-color: #eeeeee; /* Placeholder color before image loads */
+    transition: transform 0.4s ease;
+}
+
+/* Optional: Slight zoom effect when hovering over the product card */
+article:hover img {
+    transform: scale(1.05);
+}

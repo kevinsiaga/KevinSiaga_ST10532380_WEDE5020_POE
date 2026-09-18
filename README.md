@@ -31,3 +31,14 @@ WED POE
 * Swapped out presentational tags (`<b>`, `<i>`) for correct semantic tags (`<strong>`, `<em>`) across all HTML files to improve accessibility.
 * Cleaned up the `contact.html` form by removing redundant `<br>` tags so the layout can be properly controlled by CSS.
 * Added clear, descriptive comments throughout all HTML files to explain the purpose of each section.
+
+## Part 2: CSS & Responsive Design**
+
+* Set up the main `style.css` file to handle all the base fonts, colors, and global brand styling.
+* Used CSS Grid to build out the product layout on the shop page and Flexbox to keep the navigation menu neat and aligned.
+* Wrote media queries for mobile (480px) and tablet (768px) screens so the layout cleanly drops from multiple columns down to a single column on smaller devices.
+* Swapped out fixed sizing for relative units (like `rem` and `%`) so the text and spacing scale smoothly on any screen.
+* Set up the product image styling
+* Updated the main navigation menu across all HTML files to include a "Cart (0)" link so users can actually access their bag.
+* Created a brand new `cart.html` page to close the shopping loop, giving users a place to review their items and check out.
+* Reused the existing form CSS to style the checkout form on the cart page, keeping the design consistent without needing extra code.

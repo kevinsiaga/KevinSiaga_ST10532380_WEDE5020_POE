@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Document Setup and Metadata -->
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4our.00 | About</title>
+    <title>4our.00 | About Our Brand</title>
+    <meta name="description" content="Discover the story and values behind 4our.00, a contemporary streetwear brand bridging underground aesthetics with premium quality.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Main Site Header and Global Navigation -->
-    <header>
-        <h1>4our.00</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart (0)</a></li>
-            </ul>
-        </nav>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">4our<span>.00</span></a>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Primary Page Content -->
+    <!-- Main About Section -->
     <main>
-        <!-- Brand Slogan -->
-        <section>
-            <h2>Our Story</h2>
-            <p>4 Our own artistic Expression</p>
-        </section>
+        <section class="about-hero">
+            <div class="about-container">
+                
+                <!-- Left Column: Story & Origin -->
+                <div class="about-text-content">
+                    <h1>Our Meaning</h1>
+                    <p class="tagline">"4 Our own artistic Expression"</p>
+                    
+                    <div class="story-block">
+                        <h2>The Origin</h2>
+                        <p>Founded to bridge underground streetwear aesthetics with high-grade garment quality, 4our.00 represents modern urban lifestyle and expression. We deliver carefully crafted drops designed for the community.</p>
+                    </div>
 
-        <!-- Brand History and Origin -->
-        <section>
-            <h3>The Origin</h3>
-            <p>Founded to bridge underground streetwear aesthetics with high-grade garment quality, 4our.00 represents modern urban lifestyle and expression. We deliver carefully crafted drops designed for the community.</p>
-        </section>
+                    <div class="values-section">
+                        <h2>Brand Values</h2>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <h3>Quality</h3>
+                                <p>Heavyweight fabrics and durable construction built to last.</p>
+                            </div>
+                            <div class="value-card">
+                                <h3>Authenticity</h3>
+                                <p>Designed locally and anchored in real street culture.</p>
+                            </div>
+                            <div class="value-card">
+                                <h3>Sustainability</h3>
+                                <p>Focused on small-batch drops to limit waste and overproduction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Core Brand Principles -->
-        <section>
-            <h3>Brand Values</h3>
-            <ul>
-                <!-- Semantic strong tags used for emphasis -->
-                <li><strong>Quality:</strong> Heavyweight fabrics and durable construction.</li>
-                <li><strong>Authenticity:</strong> Designed locally and anchored in real street culture.</li>
-                <li><strong>Sustainability:</strong> Focused on small-batch drops to limit waste.</li>
-            </ul>
+                <!-- Right Column: Brand Visual / Lookbook Image Space -->
+                <div class="about-image-wrapper">
+                    <img src="4our.00 Streetwear Lookbook.png" alt="4our.00 streetwear lookbook showcase" loading="lazy">
+                </div>
+
+            </div>
         </section>
     </main>
 
-    <!-- Global Footer -->
-    <footer>
-        <p>&copy; 2026 4our.00 Storefront. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 4our.00. All rights reserved.</p>
+        <p><a href="references.html">View Project References</a></p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

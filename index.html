@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Document Setup and Metadata -->
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4our.00 | Home</title>
-    <!-- Site Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>4our.00 | Shop Catalog</title>
+    
+    <!-- Link the CSS file correctly -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Optional Google Font for clean modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Main Site Header and Global Navigation -->
-    <header>
-        <h1>4our.00</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart (0)</a></li>
-            </ul>
-        </nav>
+    <!-- Header & Navigation Section -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">4our<span>.00</span></a>
+            
+            <!-- Mobile Menu Toggle Button (Handled via JavaScript) -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Primary Page Content -->
+    <!-- Main Content Wrapper -->
     <main>
-        <!-- Hero Section / Introduction -->
-        <section>
-            <h2>Contemporary Streetwear</h2>
-            <p>Explore the latest streetwear drops and essential apparel built for modern urban culture.</p>
-            <p><a href="shop.html">Browse Catalog</a></p>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Redefining Modern Streetwear</h1>
+                <p>Minimalist silhouettes crafted for the urban landscape. Explore our latest drop.</p>
+                <a href="shop.html" class="btn-primary">Shop Collection</a>
+            </div>
         </section>
 
-        <!-- Featured Products Gallery -->
-        <section>
-            <h2>Featured Drops</h2>
-            
-            <article>
-                <h3>Heavy Graphic Tee</h3>
-                <p>Price: R 450.00</p>
-                <p><a href="shop.html">View Item</a></p>
-            </article>
-
-            <article>
-                <h3>Cargo Overshirt</h3>
-                <p>Price: R 850.00</p>
-                <p><a href="shop.html">View Item</a></p>
-            </article>
-
-            <article>
-                <h3>Utility Hoodie</h3>
-                <p>Price: R 720.00</p>
-                <p><a href="shop.html">View Item</a></p>
-            </article>
+        <!-- Featured Products Grid -->
+        <section class="featured-products">
+            <h2>Latest Drops</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="4our.00 Premium Streetwear Hoodie Showcase.png" alt="Black Subtle Heavyweight Hoodie" loading="lazy">
+                    <h3>Subtle Heavyweight Hoodie</h3>
+                    <p class="price">R 1,299.00</p>
+                    <button class="btn-secondary">Add to Cart</button>
+                </article>
+                <article class="product-card">
+                    <img src="4our.00 Utility Cargo Pants Showcase.png" alt="Utility Cargo Pants" loading="lazy">
+                    <h3>Utility Cargo Pants</h3>
+                    <p class="price">R 1,099.00</p>
+                    <button class="btn-secondary">Add to Cart</button>
+                </article>
+            </div>
         </section>
     </main>
 
-    <!-- Global Footer -->
-    <footer>
-        <p>&copy; 2026 4our.00 Storefront. All rights reserved.</p>
+    <!-- Footer with Harvard Reference Link -->
+    <footer class="site-footer">
+        <p>&copy; 2026 4our.00. All rights reserved.</p>
+        <p><a href="references.html">View Project References</a></p>
     </footer>
 
+    <!-- Script file linked at the bottom for performance -->
+    <script src="script.js"></script>
 </body>
 </html>

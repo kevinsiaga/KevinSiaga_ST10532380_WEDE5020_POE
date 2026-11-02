@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Document Setup and Metadata -->
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4our.00 | Shop</title>
-    <!-- Site Favicon -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <title>4our.00 | Shop Catalog</title>
+    
+    <!-- Link the CSS file correctly -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Optional Google Font for clean modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Main Site Header and Global Navigation -->
-    <header>
-        <h1>4our.00</h1>
-        <nav>
-            <ul>
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">4our<span>.00</span></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+            ☰
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart (0)</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <!-- Primary Page Content -->
     <main>
-        <!-- Shop Header -->
-        <section>
-            <h2>Catalog</h2>
-            <p>Streetwear Essentials &amp; Drops</p>
-        </section>
+    <section class="catalog-section">
+        <div class="catalog-header">
+            <h1>Catalog</h1>
+            <p>Streetwear Essentials & Drops</p>
+        </div>
 
-        <!-- Product Filtering and Sorting Controls -->
-        <section>
-            <form>
-                <label for="category">Category:</label>
-                <select id="category" name="category">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div>
+                <label for="category-select">Category:</label>
+                <select id="category-select">
                     <option value="all">All Items</option>
                     <option value="tees">Tees</option>
                     <option value="outerwear">Outerwear</option>
-                    <option value="headwear">Headwear</option>
+                    <option value="denim">Denim</option>
                 </select>
-
-                <label for="sort">Sort By:</label>
-                <select id="sort" name="sort">
+            </div>
+            <div>
+                <label for="sort-select">Sort By:</label>
+                <select id="sort-select">
                     <option value="newest">Newest First</option>
                     <option value="price-low">Price: Low to High</option>
                     <option value="price-high">Price: High to Low</option>
                 </select>
-            </form>
-        </section>
+            </div>
+        </div>
 
-        <!-- Product Grid Listing -->
-        <section>
-            <h3>Products</h3>
-
-            <article>
-                <h4>Heavy Graphic Tee</h4>
-                <p>Price: R 450.00</p>
-                <button type="button">Add to Cart</button>
+        <!-- Product Grid Layout (Fixes the vertical stack issue) -->
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <article class="product-card">
+                <img src="4our.00 Graphic Tee.png" alt="Heavy Graphic Tee in washed black">
+                <h3>Heavy Graphic Tee</h3>
+                <p class="price">R 450.00</p>
+                <button class="btn-primary">Add to Cart</button>
             </article>
 
-            <article>
-                <h4>Cargo Overshirt</h4>
-                <p>Price: R 850.00</p>
-                <button type="button">Add to Cart</button>
+            <!-- Product 2 -->
+            <article class="product-card">
+                <img src="4our.00 Cargo Overshirt .png" alt="Cargo Overshirt in tactical olive">
+                <h3>Cargo Overshirt</h3>
+                <p class="price">R 850.00</p>
+                <button class="btn-primary">Add to Cart</button>
             </article>
 
-            <article>
-                <h4>Utility Hoodie</h4>
-                <p>Price: R 720.00</p>
-                <button type="button">Add to Cart</button>
+            <!-- Product 3 -->
+            <article class="product-card">
+                <img src="4our.00 Utility Hoodie Lookbook.png" alt="Utility Hoodie in vintage grey">
+                <h3>Utility Hoodie</h3>
+                <p class="price">R 720.00</p>
+                <button class="btn-primary">Add to Cart</button>
             </article>
 
-            <article>
-                <h4>Relaxed Denim</h4>
-                <p>Price: R 950.00</p>
-                <button type="button">Add to Cart</button>
+            <!-- Product 4 -->
+            <article class="product-card">
+                <img src="4our.00 Relaxed Denim.png" alt="Relaxed Denim jeans with distressed finish">
+                <h3>Relaxed Denim</h3>
+                <p class="price">R 950.00</p>
+                <button class="btn-primary">Add to Cart</button>
             </article>
 
-            <article>
-                <h4>Boxy Fit Crew</h4>
-                <p>Price: R 550.00</p>
-                <button type="button">Add to Cart</button>
-            </article>
+        </div>
+    </section>
+</main>
 
-            <article>
-                <h4>Tactical Cap</h4>
-                <p>Price: R 300.00</p>
-                <button type="button">Add to Cart</button>
-            </article>
-        </section>
-    </main>
-
-    <!-- Global Footer -->
-    <footer>
-        <p>&copy; 2026 4our.00 Storefront. All rights reserved.</p>
+    <!-- Footer with Harvard Reference Link -->
+    <footer class="site-footer">
+        <p>&copy; 2026 4our.00. All rights reserved.</p>
+        <p><a href="references.html">View Project References</a></p>
     </footer>
 
 </body>

@@ -3,64 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4our.00 | Shopping Cart</title>
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    <link rel="stylesheet" href="style.css">
+    <title>4our.00 | Your Shopping Cart</title>
+    <meta name="description" content="View items in your 4our.00 shopping cart.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>4our.00</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><strong>Cart (0)</strong></a></li>
-            </ul>
-        </nav>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">4our<span>.00</span></a>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="active">Cart (0)</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Cart Items View -->
     <main>
-        <section>
-            <h2>Your Bag</h2>
-            <p>Review your items before checkout.</p>
-        </section>
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <h1>Shopping Cart</h1>
+                <p>Review your items before checkout.</p>
+            </div>
 
-        <!-- Cart Items (CSS Grid handles this nicely) -->
-        <section style="margin-bottom: 3rem; border-top: 1px solid #e0e0e0; padding-top: 2rem;">
-            <p><em>Your cart is currently empty.</em></p>
-            <p><a href="shop.html" style="text-decoration: underline;">Continue Shopping</a></p>
-        </section>
+            <div id="cart-display-container">
+                <!-- JavaScript renders items dynamically here -->
+            </div>
 
-        <section>
-            <h3>Checkout Details</h3>
-            <!-- Reusing the contact-form class for quick styling -->
-            <form action="#" method="post" class="contact-form">
-                <div>
-                    <label for="shipping-address">Shipping Address:</label>
-                    <input type="text" id="shipping-address" name="shipping-address" required>
-                </div>
-
-                <div>
-                    <label for="payment-method">Payment Method:</label>
-                    <select id="payment-method" name="payment-method">
-                        <option value="card">Credit / Debit Card</option>
-                        <option value="eft">EFT</option>
-                    </select>
-                </div>
-
-                <div>
-                    <button type="submit">Place Order</button>
-                </div>
-            </form>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <button id="clear-cart-btn" class="btn-secondary" style="width: auto;">Clear Cart</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 4our.00 Storefront. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 4our.00. All rights reserved.</p>
+        <p><a href="references.html">View Project References</a></p>
     </footer>
 
+    <script src="script.js"></script>
+    <script>
+        // Specific inline renderer for cart.html
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('cart-display-container');
+            const clearBtn = document.getElementById('clear-cart-btn');
+            
+            function renderCartPage() {
+                const cart = JSON.parse(localStorage.getItem('4our00_cart')) || [];
+                
+                if (cart.length === 0) {
+                    container.innerHTML = `<p style="color: var(--text-muted);">Your cart is currently empty. <a href="shop.html" style="color: var(--accent-red);">Browse the shop</a></p>`;
+                    return;
+                }
+
+                let html = `<div class="product-grid">`;
+                cart.forEach((item, index) => {
+                    html += `
+                        <article class="product-card">
+                            <img src="${item.image}" alt="${item.name}">
+                            <h3>${item.name}</h3>
+                            <p class="price">${item.price}</p>
+                            <button onclick="removeCartItem(${index})" class="btn-secondary" style="border-top:1px solid #333;">Remove</button>
+                        </article>
+                    `;
+                });
+                html += `</div>`;
+                container.innerHTML = html;
+            }
+
+            window.removeCartItem = function(index) {
+                let cart = JSON.parse(localStorage.getItem('4our00_cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('4our00_cart', JSON.stringify(cart));
+                location.reload();
+            };
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    localStorage.removeItem('4our00_cart');
+                    location.reload();
+                });
+            }
+
+            renderCartPage();
+        });
+    </script>
 </body>
 </html>

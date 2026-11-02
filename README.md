@@ -81,3 +81,6 @@ W3C Web Accessibility Initiative (WAI). 2026. Web Content Accessibility Guidelin
 W3Schools. 2026. How To Create a Responsive Navigation Menu. [online] Available at: https://www.w3.org/howto/howto_js_responsive_navbar_dropdown.asp [Accessed 2 November 2026].
 
 W3Schools. 2026. JavaScript Form Validation. [online] Available at: https://www.w3schools.com/js/js_validation.asp [Accessed 2 November 2026].
+
+## PAGE LINK
+https://kevinsiaga.github.io/KevinSiaga_ST10532380_WEDE5020_POE/
